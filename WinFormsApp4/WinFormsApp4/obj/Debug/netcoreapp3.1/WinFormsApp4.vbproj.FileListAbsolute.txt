@@ -1,0 +1,16 @@
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.Form1.resources
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.vbproj.GenerateResource.cache
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.AssemblyInfoInputs.cache
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.AssemblyInfo.vb
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.vbproj.CoreCompileInputs.cache
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\bin\Debug\netcoreapp3.1\WinFormsApp4.exe
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\bin\Debug\netcoreapp3.1\WinFormsApp4.deps.json
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\bin\Debug\netcoreapp3.1\WinFormsApp4.runtimeconfig.json
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\bin\Debug\netcoreapp3.1\WinFormsApp4.runtimeconfig.dev.json
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\bin\Debug\netcoreapp3.1\WinFormsApp4.dll
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\bin\Debug\netcoreapp3.1\WinFormsApp4.pdb
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.dll
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.pdb
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.genruntimeconfig.cache
+C:\Users\Sala403-3\source\repos\WinFormsApp4\WinFormsApp4\obj\Debug\netcoreapp3.1\WinFormsApp4.vbproj.AssemblyReference.cache

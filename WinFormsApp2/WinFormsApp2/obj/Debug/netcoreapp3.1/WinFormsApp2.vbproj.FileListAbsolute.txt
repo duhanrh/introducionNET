@@ -1,0 +1,15 @@
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\Areatri.exe
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\Areatri.deps.json
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\Areatri.runtimeconfig.json
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\Areatri.runtimeconfig.dev.json
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\Areatri.dll
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\Areatri.pdb
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.Form1.resources
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.vbproj.GenerateResource.cache
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.AssemblyInfoInputs.cache
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.AssemblyInfo.vb
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.vbproj.CoreCompileInputs.cache
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\Areatri.dll
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\Areatri.pdb
+C:\Users\Sala403-3\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.genruntimeconfig.cache

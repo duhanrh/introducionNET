@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>WinFormsApp2</RootNamespace>
+    <StartupObject>WinFormsApp2.Form1</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>Areatri</AssemblyName>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <Description>Programa para calcular el área de un triangulo</Description>
+    <Authors>Duhan Renteria</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

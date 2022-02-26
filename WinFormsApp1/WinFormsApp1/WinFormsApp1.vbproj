@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>WinFormsApp1</RootNamespace>
+    <StartupObject>WinFormsApp1.Form1</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>Winboned</AssemblyName>
+    <Authors>Duhan Renteria</Authors>
+    <Description>Programa que calcula la edad ingresada en dias vivido y otorga un bono de acuerdo al rango de edad
+
+si la edad es mayor a 50 recibe  70.000
+si la edad es mayor a 40 recibe 50.000
+para el resto un bono de 20.000</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>
