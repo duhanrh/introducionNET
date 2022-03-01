@@ -1,0 +1,44 @@
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.vbproj.AssemblyReference.cache
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.exe
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.deps.json
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.runtimeconfig.json
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.runtimeconfig.dev.json
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.dll
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.pdb
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form1.resources
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.MDIParent1.resources
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Resources.resources
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.SplashScreen1.resources
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.vbproj.GenerateResource.cache
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.AssemblyInfoInputs.cache
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.AssemblyInfo.vb
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.vbproj.CoreCompileInputs.cache
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\Competencias One And Two Censa.dll
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\Competencias One And Two Censa.pdb
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.genruntimeconfig.cache
+C:\Users\asesor\source\repos\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form2.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.exe
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.deps.json
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.runtimeconfig.json
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.runtimeconfig.dev.json
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.dll
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\bin\Debug\netcoreapp3.1\Competencias One And Two Censa.pdb
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form1.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form2.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form3.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form4.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form5.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form6.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Form7.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.MDIParent1.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.Resources.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.SplashScreen1.resources
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.vbproj.GenerateResource.cache
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.AssemblyInfoInputs.cache
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.AssemblyInfo.vb
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.vbproj.CoreCompileInputs.cache
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\Competencias One And Two Censa.dll
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\Competencias One And Two Censa.pdb
+C:\Users\asesor\source\repos\IntroduccionNET\CompetenciasOneAndTwo\CompetenciasOneAndTwo\obj\Debug\netcoreapp3.1\CompetenciasOneAndTwo.genruntimeconfig.cache
