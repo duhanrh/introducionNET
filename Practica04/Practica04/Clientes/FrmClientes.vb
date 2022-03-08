@@ -1,4 +1,4 @@
-﻿Public Class FrmVentas
+﻿Public Class FrmClientes
 
     Private Sub BtnBuscarProducto_Click(sender As Object, e As EventArgs) Handles BtnBuscarProducto.Click
 
