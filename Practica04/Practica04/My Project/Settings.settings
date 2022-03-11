@@ -3,13 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="ColorForm" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">GradientInactiveCaption</Value>
+      <Value Profile="(Default)">White</Value>
     </Setting>
     <Setting Name="ColorPrimary" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">92, 190, 255</Value>
     </Setting>
     <Setting Name="ColorSecondary" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">244, 56, 52</Value>
+    </Setting>
+    <Setting Name="ColorThird" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
     </Setting>
   </Settings>
 </SettingsFile>

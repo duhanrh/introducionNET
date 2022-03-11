@@ -9,12 +9,17 @@
     <ApplicationIcon>Resources\ShopNet.ico</ApplicationIcon>
     <AssemblyName>ShopNet</AssemblyName>
     <Authors>Duhan Enrique Renteria Hernandez</Authors>
+    <Copyright />
   </PropertyGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
   </ItemGroup>
 
   <ItemGroup>

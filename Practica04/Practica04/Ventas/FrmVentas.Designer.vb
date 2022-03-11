@@ -114,6 +114,7 @@ Partial Class FrmVentas
         Me.TxtIdVenta.TabIndex = 2
         Me.TxtIdVenta.Text = "000001"
         Me.TxtIdVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtIdVenta.Visible = False
         '
         'Label3
         '
@@ -126,6 +127,7 @@ Partial Class FrmVentas
         Me.Label3.Size = New System.Drawing.Size(112, 32)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "VENTA #"
+        Me.Label3.Visible = False
         '
         'PictureBox1
         '
@@ -378,7 +380,7 @@ Partial Class FrmVentas
         Me.GbDetalles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GbDetalles.Location = New System.Drawing.Point(13, 216)
         Me.GbDetalles.Name = "GbDetalles"
-        Me.GbDetalles.Size = New System.Drawing.Size(1010, 193)
+        Me.GbDetalles.Size = New System.Drawing.Size(1010, 211)
         Me.GbDetalles.TabIndex = 4
         Me.GbDetalles.TabStop = False
         Me.GbDetalles.Text = "Detalles de la venta"
@@ -393,8 +395,9 @@ Partial Class FrmVentas
         Me.DgDetallesVenta.Name = "DgDetallesVenta"
         Me.DgDetallesVenta.ReadOnly = True
         Me.DgDetallesVenta.RowTemplate.Height = 25
-        Me.DgDetallesVenta.Size = New System.Drawing.Size(1004, 169)
+        Me.DgDetallesVenta.Size = New System.Drawing.Size(1004, 187)
         Me.DgDetallesVenta.TabIndex = 0
+        Me.DgDetallesVenta.Visible = False
         '
         'BtnGuardar
         '
@@ -434,7 +437,7 @@ Partial Class FrmVentas
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnGuardar, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCancelar, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(853, 418)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(853, 465)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -446,7 +449,7 @@ Partial Class FrmVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1035, 460)
+        Me.ClientSize = New System.Drawing.Size(1035, 507)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.GbDetalles)
         Me.Controls.Add(Me.GbProducto)

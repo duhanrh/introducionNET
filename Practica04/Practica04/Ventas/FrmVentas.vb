@@ -1,13 +1,11 @@
-﻿Public Class FrmVentas
-
-    Private Sub BtnBuscarProducto_Click(sender As Object, e As EventArgs) Handles BtnBuscarProducto.Click
-
-    End Sub
-
-    Private Sub BtnBuscarCliente_Click(sender As Object, e As EventArgs) Handles BtnBuscarCliente.Click
-
-    End Sub
-
+﻿'Importamos la librería necesaria para nuestra conexión
+Imports System.Data.SQLite
+Imports System.Data.SqlClient
+Public Class FrmVentas
+    Private Const V As String = "productos"
+    'Creamos un objeto de nombre "con" de tipo SQLiteConnetion y le asignamos nuestra cadena de conexión con la ruta de nuestra base de datos
+    Dim con As New SQLiteConnection("Data Source=practica4.db; Version=3")
+    Dim consecutivo As Integer
     Private Sub TxtIdProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtIdProducto.KeyPress
         e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
     End Sub
@@ -34,4 +32,25 @@
         e.Handled = Not IsNumeric(e.KeyChar) And Not (Char.IsLetter(e.KeyChar)) And Not Char.IsControl(e.KeyChar)
     End Sub
 
+    Private Sub FrmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            ':::Abrimos la conexión
+            con.Open()
+            ':::Si se estableció conexión correctamente dirá "Conectado"
+            MessageBox.Show("Conectado")
+        Catch ex As Exception
+            ':::Si no se conecta nos mostrara el posible fallo en la conexión
+            MessageBox.Show("No se conecto por: " & ex.Message)
+        End Try
+        CargarProductos()
+    End Sub
+
+    Private Sub CargarProductos()
+        Dim ds As New DataSet
+        Dim da As New SQLiteDataAdapter("select * from productos ", con)
+        da.Fill(ds, "productos")
+
+        Dim dataViewLocal As DataView = New DataView(ds.Tables(V))
+        DgDetallesVenta.DataSource = dataViewLocal
+    End Sub
 End Class

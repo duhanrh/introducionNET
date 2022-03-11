@@ -53,40 +53,52 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(),
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-         Global.System.Configuration.DefaultSettingValueAttribute("GradientInactiveCaption")>
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("White")>  _
         Public Property ColorForm() As Global.System.Drawing.Color
             Get
-                Return CType(Me("ColorForm"), Global.System.Drawing.Color)
+                Return CType(Me("ColorForm"),Global.System.Drawing.Color)
             End Get
             Set
-                Me("ColorForm") = Value
+                Me("ColorForm") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(),
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-         Global.System.Configuration.DefaultSettingValueAttribute("92, 190, 255")>
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("92, 190, 255")>  _
         Public Property ColorPrimary() As Global.System.Drawing.Color
             Get
-                Return CType(Me("ColorPrimary"), Global.System.Drawing.Color)
+                Return CType(Me("ColorPrimary"),Global.System.Drawing.Color)
             End Get
             Set
-                Me("ColorPrimary") = Value
+                Me("ColorPrimary") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(),
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-         Global.System.Configuration.DefaultSettingValueAttribute("244, 56, 52")>
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("244, 56, 52")>  _
         Public Property ColorSecondary() As Global.System.Drawing.Color
             Get
-                Return CType(Me("ColorSecondary"), Global.System.Drawing.Color)
+                Return CType(Me("ColorSecondary"),Global.System.Drawing.Color)
             End Get
             Set
-                Me("ColorSecondary") = Value
+                Me("ColorSecondary") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("White")>  _
+        Public Property ColorThird() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("ColorThird"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("ColorThird") = value
             End Set
         End Property
     End Class

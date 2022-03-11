@@ -1,43 +1,21 @@
 ﻿Imports System.Windows.Forms
-
+Imports Practica04.CheckForm
 Public Class MDIParent1
     ReadOnly title As String = "SHOPNET" 'ShopNet
+    Dim VerFRM As New CheckForm
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NuevoVentasMenu.Click, NewWindowToolStripMenuItem.Click
         ' Cree una nueva instancia del formulario secundario.
-        Dim ChildForm As New FrmVentas
-        ' Conviértalo en un elemento secundario de este formulario MDI antes de mostrarlo.
-        ChildForm.MdiParent = Me
+        ListarVentasMenu.PerformClick()
+        Dim FRM As New FrmVentas
+        FRM.StartPosition = FormStartPosition.CenterScreen
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Nueva venta" '& m_ChildFormNumber
-        ChildForm.WindowState = FormWindowState.Maximized
-        ChildForm.Show()
+        FRM.BTNguardar.Text = "Guardar"
+        FRM.Text = "Nuevo cliente"
+        FRM.Show()
     End Sub
-
-
 
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.Close()
-    End Sub
-
-    Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        ' Utilice My.Computer.Clipboard para insertar el texto o las imágenes seleccionadas en el Portapapeles
-    End Sub
-
-    Private Sub CopyToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        ' Utilice My.Computer.Clipboard para insertar el texto o las imágenes seleccionadas en el Portapapeles
-    End Sub
-
-    Private Sub PasteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        'Utilice My.Computer.Clipboard.GetText() o My.Computer.Clipboard.GetData para recuperar la información del Portapapeles.
-    End Sub
-
-    Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ToolBarToolStripMenuItem.Click
-        'Me.ToolStrip.Visible = Me.ToolBarToolStripMenuItem.Checked
-    End Sub
-
-    Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles StatusBarToolStripMenuItem.Click
-        Me.StatusStrip.Visible = Me.StatusBarToolStripMenuItem.Checked
     End Sub
 
     Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CascadeToolStripMenuItem.Click
@@ -77,5 +55,103 @@ Public Class MDIParent1
         Dim frm As New AboutBox1
         frm.Text = "Acerca de " & title
         frm.ShowDialog()
+    End Sub
+
+    Private Sub ListarProductosMenu_Click(sender As Object, e As EventArgs) Handles ListarProductosMenu.Click
+        ' Cree una nueva instancia del formulario secundario.
+        Dim frm As New FrmExploradorProductos
+        frm.MdiParent = Me
+        CenterToParent()
+        m_ChildFormNumber += 1
+        frm.Text = "Productos y servicios"
+        frm.WindowState = FormWindowState.Maximized
+        frm.StartPosition = FormStartPosition.CenterParent
+        If VerFRM.EstaAbierto(frm) Then
+            For Each ChildForm As Form In Me.MdiChildren
+                If ChildForm.Name = frm.Name Then
+                    ChildForm.Activate()
+                    Exit For
+                End If
+            Next
+        Else
+            frm.RBestados_activos.Checked = True
+            frm.Show()
+        End If
+
+    End Sub
+
+    Private Sub NuevoProductosMenu_Click(sender As Object, e As EventArgs) Handles NuevoProductosMenu.Click
+        ' Cree una nueva instancia del formulario secundario.
+        ListarProductosMenu.PerformClick()
+        Dim FRM As New FrmProducto
+        FRM.StartPosition = FormStartPosition.CenterScreen
+        FRM.RBnuevo.Enabled = True
+        FRM.RBnuevo.Checked = True
+        FRM.GBdatos.Enabled = True
+        FRM.RBactualizar.Enabled = False
+        FRM.RBrestaurar.Enabled = False
+        FRM.RBeliminar.Enabled = False
+        FRM.BTNguardar.Text = "Guardar"
+        FRM.Text = "Nuevo producto o servicio"
+        FRM.Show()
+    End Sub
+
+    Private Sub ListarClientesMenu_Click(sender As Object, e As EventArgs) Handles ListarClientesMenu.Click
+        ' Cree una nueva instancia del formulario secundario.
+        Dim frm As New FrmExploradorClientes
+        frm.MdiParent = Me
+        CenterToParent()
+        m_ChildFormNumber += 1
+        frm.Text = "Clientes"
+        frm.WindowState = FormWindowState.Maximized
+        frm.StartPosition = FormStartPosition.CenterParent
+        If VerFRM.EstaAbierto(frm) Then
+            For Each ChildForm As Form In Me.MdiChildren
+                If ChildForm.Name = frm.Name Then
+                    ChildForm.Activate()
+                    Exit For
+                End If
+            Next
+        Else
+            frm.RBestados_activos.Checked = True
+            frm.Show()
+        End If
+    End Sub
+    Private Sub NuevoClientesMenu_Click(sender As Object, e As EventArgs) Handles NuevoClientesMenu.Click
+        ' Cree una nueva instancia del formulario secundario.
+        ListarClientesMenu.PerformClick()
+        Dim FRM As New FrmCliente
+        FRM.StartPosition = FormStartPosition.CenterScreen
+        FRM.RBnuevo.Enabled = True
+        FRM.RBnuevo.Checked = True
+        FRM.GBdatos.Enabled = True
+        FRM.RBactualizar.Enabled = False
+        FRM.RBrestaurar.Enabled = False
+        FRM.RBeliminar.Enabled = False
+        FRM.BTNguardar.Text = "Guardar"
+        FRM.Text = "Nuevo cliente"
+        FRM.Show()
+    End Sub
+
+    Private Sub ListarVentasMenu_Click(sender As Object, e As EventArgs) Handles ListarVentasMenu.Click
+        ' Cree una nueva instancia del formulario secundario.
+        Dim frm As New FrmExploradorVentas
+        frm.MdiParent = Me
+        CenterToParent()
+        m_ChildFormNumber += 1
+        frm.Text = "Ventas"
+        frm.WindowState = FormWindowState.Maximized
+        frm.StartPosition = FormStartPosition.CenterParent
+        If VerFRM.EstaAbierto(frm) Then
+            For Each ChildForm As Form In Me.MdiChildren
+                If ChildForm.Name = frm.Name Then
+                    ChildForm.Activate()
+                    Exit For
+                End If
+            Next
+        Else
+            'frm.RBestados_activos.Checked = True
+            frm.Show()
+        End If
     End Sub
 End Class
