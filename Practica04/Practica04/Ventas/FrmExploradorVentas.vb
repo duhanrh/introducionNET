@@ -38,6 +38,7 @@ Public Class FrmExploradorVentas
         DGdatos.Columns(0).DefaultCellStyle.Format = "00000"
         DGdatos.Columns(4).DefaultCellStyle.Format = "#,###.00"
     End Sub
+
     Private Sub BTNnuevo_Click(sender As Object, e As EventArgs) Handles BTNnuevo.Click
         Dim FRM As New FrmVentas
         FRM.StartPosition = FormStartPosition.CenterScreen
@@ -85,7 +86,7 @@ Public Class FrmExploradorVentas
             frm.TxtIdVenta.Text = Format(DGdatos.CurrentRow.Cells(0).Value, "00000")
             frm.DtpFecha.Value = DGdatos.CurrentRow.Cells(1).Value.ToString
             frm.TxtNit.Text = DGdatos.CurrentRow.Cells(2).Value
-            frm.Text = "Cliente # " & Format(DGdatos.CurrentRow.Cells(0).Value, "00000")
+            frm.Text = "Venta # " & Format(DGdatos.CurrentRow.Cells(0).Value, "00000")
             frm.RBnuevo.Enabled = False
             frm.RBnuevo.Checked = False
             frm.GBdatos.Enabled = False

@@ -1,0 +1,17 @@
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.vbproj.AssemblyReference.cache
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.Form1.resources
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.Resources.resources
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.vbproj.GenerateResource.cache
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.AssemblyInfoInputs.cache
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.AssemblyInfo.vb
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.vbproj.CoreCompileInputs.cache
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\bin\Debug\netcoreapp3.1\WinFormsApp5.exe
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\bin\Debug\netcoreapp3.1\WinFormsApp5.deps.json
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\bin\Debug\netcoreapp3.1\WinFormsApp5.runtimeconfig.json
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\bin\Debug\netcoreapp3.1\WinFormsApp5.runtimeconfig.dev.json
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\bin\Debug\netcoreapp3.1\WinFormsApp5.dll
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\bin\Debug\netcoreapp3.1\WinFormsApp5.pdb
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.dll
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.pdb
+C:\Users\Sala403-3\source\repos\introducionNET\WinFormsApp5\WinFormsApp5\obj\Debug\netcoreapp3.1\WinFormsApp5.genruntimeconfig.cache

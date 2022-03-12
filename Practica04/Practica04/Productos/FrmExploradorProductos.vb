@@ -27,7 +27,7 @@ Public Class FrmExploradorProductos
         DGdatos.Columns(1).HeaderText = "NOMBRE"
         DGdatos.Columns(2).HeaderText = "PRECIO UNITARIO"
         DGdatos.Columns(3).HeaderText = "IMAGEN"
-        DGdatos.Columns(4).HeaderText = "ESTADO"
+        DGdatos.Columns(4).HeaderText = "ACTIVO"
         DGdatos.Columns(3).Visible = False
         DGdatos.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DGdatos.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft

@@ -25,7 +25,7 @@ Public Class FrmExploradorClientes
         DGdatos.Columns(0).HeaderText = "CODIGO"
         DGdatos.Columns(1).HeaderText = "IDENTIFICACION"
         DGdatos.Columns(2).HeaderText = "CLIENTE"
-        DGdatos.Columns(3).HeaderText = "ESTADO"
+        DGdatos.Columns(3).HeaderText = "ACTIVO"
         'DGdatos.Columns(3).Visible = False
         DGdatos.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DGdatos.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft

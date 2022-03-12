@@ -6,8 +6,23 @@ Public Class FrmVentas
     Dim SqlGroup As String = " GROUP BY ventas.IdVenta"
     Dim tituloAPP As String = Application.ProductName
 
+    Sub ConsultaCliente(ByVal nit As String)
+        Dim consultaSql As String = "SELECT * FROM clientes WHERE identificacion=" & Val(TxtNit.Text)
+
+
+    End Sub
+
+    Sub ConsultaDetallesVenta(ByVal nit As String)
+        Dim consultaSql As String = "SELECT * FROM clientes WHERE identificacion=" & Val(TxtNit.Text)
+
+
+    End Sub
+
     Private Sub FrmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
+    Private Sub BtnBuscarCliente_Click(sender As Object, e As EventArgs) Handles BtnBuscarCliente.Click
+        ConsultaCliente(TxtNit.Text)
+    End Sub
 End Class
