@@ -1157,23 +1157,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asesor\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asesor\\source\\repos\\IntroduccionNET\\Practica04\\Practica04\\Practica04.vbproj",
+      "projectUniqueName": "D:\\censa\\introducionNET\\Practica04\\Practica04\\Practica04.vbproj",
       "projectName": "ShopNet",
-      "projectPath": "C:\\Users\\asesor\\source\\repos\\IntroduccionNET\\Practica04\\Practica04\\Practica04.vbproj",
-      "packagesPath": "C:\\Users\\asesor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asesor\\source\\repos\\IntroduccionNET\\Practica04\\Practica04\\obj\\",
+      "projectPath": "D:\\censa\\introducionNET\\Practica04\\Practica04\\Practica04.vbproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "D:\\censa\\introducionNET\\Practica04\\Practica04\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\asesor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

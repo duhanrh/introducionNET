@@ -44,10 +44,12 @@ Partial Class FrmProducto
         Me.FOOTER = New System.Windows.Forms.StatusStrip()
         Me.BTNcancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GBacciones.SuspendLayout()
         Me.GBdatos.SuspendLayout()
         Me.HEADER.SuspendLayout()
         CType(Me.PBimagenmodulo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label11
@@ -106,7 +108,7 @@ Partial Class FrmProducto
         Me.RBactualizar.AutoSize = True
         Me.RBactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.RBactualizar.ForeColor = System.Drawing.Color.DarkRed
-        Me.RBactualizar.Location = New System.Drawing.Point(212, 16)
+        Me.RBactualizar.Location = New System.Drawing.Point(181, 3)
         Me.RBactualizar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RBactualizar.Name = "RBactualizar"
         Me.RBactualizar.Size = New System.Drawing.Size(97, 24)
@@ -118,10 +120,7 @@ Partial Class FrmProducto
         '
         Me.GBacciones.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GBacciones.Controls.Add(Me.RBrestaurar)
-        Me.GBacciones.Controls.Add(Me.RBeliminar)
-        Me.GBacciones.Controls.Add(Me.RBactualizar)
-        Me.GBacciones.Controls.Add(Me.RBnuevo)
+        Me.GBacciones.Controls.Add(Me.TableLayoutPanel1)
         Me.GBacciones.Location = New System.Drawing.Point(28, 295)
         Me.GBacciones.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GBacciones.Name = "GBacciones"
@@ -135,7 +134,7 @@ Partial Class FrmProducto
         Me.RBrestaurar.AutoSize = True
         Me.RBrestaurar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.RBrestaurar.ForeColor = System.Drawing.Color.DarkRed
-        Me.RBrestaurar.Location = New System.Drawing.Point(558, 16)
+        Me.RBrestaurar.Location = New System.Drawing.Point(535, 3)
         Me.RBrestaurar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RBrestaurar.Name = "RBrestaurar"
         Me.RBrestaurar.Size = New System.Drawing.Size(98, 24)
@@ -148,7 +147,7 @@ Partial Class FrmProducto
         Me.RBeliminar.AutoSize = True
         Me.RBeliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.RBeliminar.ForeColor = System.Drawing.Color.DarkRed
-        Me.RBeliminar.Location = New System.Drawing.Point(391, 16)
+        Me.RBeliminar.Location = New System.Drawing.Point(358, 3)
         Me.RBeliminar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RBeliminar.Name = "RBeliminar"
         Me.RBeliminar.Size = New System.Drawing.Size(83, 24)
@@ -162,7 +161,7 @@ Partial Class FrmProducto
         Me.RBnuevo.Checked = True
         Me.RBnuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.RBnuevo.ForeColor = System.Drawing.Color.DarkRed
-        Me.RBnuevo.Location = New System.Drawing.Point(64, 16)
+        Me.RBnuevo.Location = New System.Drawing.Point(4, 3)
         Me.RBnuevo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RBnuevo.Name = "RBnuevo"
         Me.RBnuevo.Size = New System.Drawing.Size(72, 24)
@@ -325,7 +324,27 @@ Partial Class FrmProducto
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         '
-        'FrmProductos
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.RBrestaurar, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.RBnuevo, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.RBeliminar, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.RBactualizar, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 13)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(708, 33)
+        Me.TableLayoutPanel1.TabIndex = 12
+        '
+        'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -343,16 +362,17 @@ Partial Class FrmProducto
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1096, 420)
         Me.MinimumSize = New System.Drawing.Size(1096, 420)
-        Me.Name = "FrmProductos"
+        Me.Name = "FrmProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producto"
         Me.GBacciones.ResumeLayout(False)
-        Me.GBacciones.PerformLayout()
         Me.GBdatos.ResumeLayout(False)
         Me.GBdatos.PerformLayout()
         Me.HEADER.ResumeLayout(False)
         Me.HEADER.PerformLayout()
         CType(Me.PBimagenmodulo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -379,4 +399,5 @@ Partial Class FrmProducto
     Friend WithEvents BTNcancelar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TXTprecio As TextBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class

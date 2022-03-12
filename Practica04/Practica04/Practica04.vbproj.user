@@ -31,5 +31,8 @@
     <Compile Update="Ventas\FrmVentas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Ventas\FrmVentas2.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

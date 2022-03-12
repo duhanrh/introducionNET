@@ -8,9 +8,16 @@ Public Class MDIParent1
         ListarVentasMenu.PerformClick()
         Dim FRM As New FrmVentas
         FRM.StartPosition = FormStartPosition.CenterScreen
-
-        FRM.BTNguardar.Text = "Guardar"
-        FRM.Text = "Nuevo cliente"
+        FRM.RBnuevo.Enabled = True
+        FRM.RBnuevo.Checked = True
+        FRM.GBdatos.Enabled = True
+        FRM.RBactualizar.Enabled = False
+        FRM.RBrestaurar.Enabled = False
+        FRM.RBeliminar.Enabled = False
+        Dim fechaActual As Date = Date.Now
+        FRM.DtpFecha.Value = fechaActual
+        FRM.BtnGuardar.Text = "Guardar"
+        FRM.Text = "Nueva venta"
         FRM.Show()
     End Sub
 

@@ -80,6 +80,7 @@ Public Class FrmExploradorClientes
             frm.RBnuevo.Enabled = False
             frm.RBnuevo.Checked = False
             frm.GBdatos.Enabled = False
+            frm.BTNguardar.Text = "Cerrar"
             If DGdatos.CurrentRow.Cells(3).Value.ToString = "N" Then
                 frm.RBactualizar.Enabled = False
                 frm.RBactualizar.Checked = False
