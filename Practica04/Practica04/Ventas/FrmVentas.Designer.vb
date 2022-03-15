@@ -24,17 +24,13 @@ Partial Class FrmVentas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVentas))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.Footer = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.PBimagenmodulo = New System.Windows.Forms.PictureBox()
         Me.Header = New System.Windows.Forms.Panel()
@@ -43,6 +39,7 @@ Partial Class FrmVentas
         Me.TxtIdVenta = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GbProducto = New System.Windows.Forms.GroupBox()
+        Me.PictureProducto = New System.Windows.Forms.PictureBox()
         Me.BtnAdicionar = New System.Windows.Forms.Button()
         Me.TxtCantidad = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -65,23 +62,31 @@ Partial Class FrmVentas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GbDetalles = New System.Windows.Forms.GroupBox()
         Me.DgDetallesVenta = New System.Windows.Forms.DataGridView()
+        Me.CodDetalle = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.accion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.opcion = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.BTNcancelar = New System.Windows.Forms.Button()
         Me.BTNguardar = New System.Windows.Forms.Button()
         Me.GBdatos = New System.Windows.Forms.GroupBox()
         Me.GBacciones = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.RBrestaurar = New System.Windows.Forms.RadioButton()
         Me.RBnuevo = New System.Windows.Forms.RadioButton()
         Me.RBeliminar = New System.Windows.Forms.RadioButton()
-        Me.RBactualizar = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.TxtTotal = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblInformador = New System.Windows.Forms.Label()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Footer, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Footer.SuspendLayout()
         CType(Me.PBimagenmodulo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Header.SuspendLayout()
         Me.GbProducto.SuspendLayout()
+        CType(Me.PictureProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbCliente.SuspendLayout()
         Me.GbDetalles.SuspendLayout()
         CType(Me.DgDetallesVenta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,97 +94,6 @@ Partial Class FrmVentas
         Me.GBacciones.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(58, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'Footer
-        '
-        Me.Footer.AddNewItem = Nothing
-        Me.Footer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Footer.AutoSize = False
-        Me.Footer.BackColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Footer.CountItem = Me.BindingNavigatorCountItem
-        Me.Footer.DeleteItem = Nothing
-        Me.Footer.Dock = System.Windows.Forms.DockStyle.None
-        Me.Footer.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.Footer.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2})
-        Me.Footer.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
-        Me.Footer.Location = New System.Drawing.Point(28, 414)
-        Me.Footer.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.Footer.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.Footer.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.Footer.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.Footer.Name = "Footer"
-        Me.Footer.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Footer.Size = New System.Drawing.Size(1040, 25)
-        Me.Footer.TabIndex = 33
-        Me.Footer.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'PBimagenmodulo
         '
@@ -262,6 +176,7 @@ Partial Class FrmVentas
         '
         Me.GbProducto.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GbProducto.Controls.Add(Me.PictureProducto)
         Me.GbProducto.Controls.Add(Me.BtnAdicionar)
         Me.GbProducto.Controls.Add(Me.TxtCantidad)
         Me.GbProducto.Controls.Add(Me.Label8)
@@ -280,6 +195,14 @@ Partial Class FrmVentas
         Me.GbProducto.TabIndex = 35
         Me.GbProducto.TabStop = False
         Me.GbProducto.Text = "Productos"
+        '
+        'PictureProducto
+        '
+        Me.PictureProducto.Location = New System.Drawing.Point(390, 82)
+        Me.PictureProducto.Name = "PictureProducto"
+        Me.PictureProducto.Size = New System.Drawing.Size(146, 67)
+        Me.PictureProducto.TabIndex = 10
+        Me.PictureProducto.TabStop = False
         '
         'BtnAdicionar
         '
@@ -319,6 +242,7 @@ Partial Class FrmVentas
         Me.TxtPrecio.Name = "TxtPrecio"
         Me.TxtPrecio.Size = New System.Drawing.Size(155, 26)
         Me.TxtPrecio.TabIndex = 6
+        Me.TxtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtProducto
         '
@@ -509,7 +433,16 @@ Partial Class FrmVentas
         '
         Me.DgDetallesVenta.AllowUserToAddRows = False
         Me.DgDetallesVenta.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(52, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgDetallesVenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DgDetallesVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgDetallesVenta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodDetalle, Me.CodProducto, Me.nombreProducto, Me.precio, Me.cantidad, Me.subtotal, Me.accion, Me.opcion})
         Me.DgDetallesVenta.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgDetallesVenta.Location = New System.Drawing.Point(3, 21)
         Me.DgDetallesVenta.Name = "DgDetallesVenta"
@@ -517,7 +450,74 @@ Partial Class FrmVentas
         Me.DgDetallesVenta.RowTemplate.Height = 25
         Me.DgDetallesVenta.Size = New System.Drawing.Size(1034, 116)
         Me.DgDetallesVenta.TabIndex = 0
-        Me.DgDetallesVenta.Visible = False
+        '
+        'CodDetalle
+        '
+        Me.CodDetalle.HeaderText = "Item"
+        Me.CodDetalle.Name = "CodDetalle"
+        Me.CodDetalle.ReadOnly = True
+        Me.CodDetalle.Visible = False
+        '
+        'CodProducto
+        '
+        Me.CodProducto.HeaderText = "IdProducto"
+        Me.CodProducto.Name = "CodProducto"
+        Me.CodProducto.ReadOnly = True
+        Me.CodProducto.Visible = False
+        '
+        'nombreProducto
+        '
+        Me.nombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.nombreProducto.HeaderText = "Producto"
+        Me.nombreProducto.Name = "nombreProducto"
+        Me.nombreProducto.ReadOnly = True
+        '
+        'precio
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.precio.DefaultCellStyle = DataGridViewCellStyle2
+        Me.precio.HeaderText = "Precio"
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        '
+        'cantidad
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.cantidad.DefaultCellStyle = DataGridViewCellStyle3
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        '
+        'subtotal
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle4
+        Me.subtotal.HeaderText = "Subtotal"
+        Me.subtotal.Name = "subtotal"
+        Me.subtotal.ReadOnly = True
+        '
+        'accion
+        '
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.accion.DefaultCellStyle = DataGridViewCellStyle5
+        Me.accion.HeaderText = "Accion"
+        Me.accion.Name = "accion"
+        Me.accion.ReadOnly = True
+        Me.accion.Visible = False
+        '
+        'opcion
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.opcion.DefaultCellStyle = DataGridViewCellStyle6
+        Me.opcion.HeaderText = "Opcion"
+        Me.opcion.Name = "opcion"
+        Me.opcion.ReadOnly = True
+        Me.opcion.Text = "Eliminar"
         '
         'BTNcancelar
         '
@@ -577,15 +577,11 @@ Partial Class FrmVentas
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.RBrestaurar, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.RBnuevo, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.RBeliminar, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.RBactualizar, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.RBeliminar, 1, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(11, 11)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -593,19 +589,6 @@ Partial Class FrmVentas
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(708, 33)
         Me.TableLayoutPanel1.TabIndex = 13
-        '
-        'RBrestaurar
-        '
-        Me.RBrestaurar.AutoSize = True
-        Me.RBrestaurar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RBrestaurar.ForeColor = System.Drawing.Color.DarkRed
-        Me.RBrestaurar.Location = New System.Drawing.Point(535, 3)
-        Me.RBrestaurar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.RBrestaurar.Name = "RBrestaurar"
-        Me.RBrestaurar.Size = New System.Drawing.Size(98, 24)
-        Me.RBrestaurar.TabIndex = 3
-        Me.RBrestaurar.Text = "Restaurar"
-        Me.RBrestaurar.UseVisualStyleBackColor = True
         '
         'RBnuevo
         '
@@ -630,23 +613,10 @@ Partial Class FrmVentas
         Me.RBeliminar.Location = New System.Drawing.Point(358, 3)
         Me.RBeliminar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RBeliminar.Name = "RBeliminar"
-        Me.RBeliminar.Size = New System.Drawing.Size(83, 24)
+        Me.RBeliminar.Size = New System.Drawing.Size(73, 24)
         Me.RBeliminar.TabIndex = 2
-        Me.RBeliminar.Text = "Eliminar"
+        Me.RBeliminar.Text = "Anular"
         Me.RBeliminar.UseVisualStyleBackColor = True
-        '
-        'RBactualizar
-        '
-        Me.RBactualizar.AutoSize = True
-        Me.RBactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RBactualizar.ForeColor = System.Drawing.Color.DarkRed
-        Me.RBactualizar.Location = New System.Drawing.Point(181, 3)
-        Me.RBactualizar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.RBactualizar.Name = "RBactualizar"
-        Me.RBactualizar.Size = New System.Drawing.Size(97, 24)
-        Me.RBactualizar.TabIndex = 1
-        Me.RBactualizar.Text = "Actualizar"
-        Me.RBactualizar.UseVisualStyleBackColor = True
         '
         'RadioButton1
         '
@@ -676,17 +646,56 @@ Partial Class FrmVentas
         Me.RadioButton2.Text = "Nuevo"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
+        'TxtTotal
+        '
+        Me.TxtTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TxtTotal.Enabled = False
+        Me.TxtTotal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.TxtTotal.Location = New System.Drawing.Point(872, 414)
+        Me.TxtTotal.Name = "TxtTotal"
+        Me.TxtTotal.Size = New System.Drawing.Size(196, 29)
+        Me.TxtTotal.TabIndex = 41
+        Me.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(817, 418)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(49, 20)
+        Me.Label11.TabIndex = 40
+        Me.Label11.Text = "Total"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblInformador
+        '
+        Me.LblInformador.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblInformador.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LblInformador.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LblInformador.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LblInformador.Location = New System.Drawing.Point(28, 414)
+        Me.LblInformador.Name = "LblInformador"
+        Me.LblInformador.Size = New System.Drawing.Size(731, 29)
+        Me.LblInformador.TabIndex = 42
+        Me.LblInformador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'FrmVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1094, 501)
+        Me.Controls.Add(Me.LblInformador)
+        Me.Controls.Add(Me.TxtTotal)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.GBacciones)
         Me.Controls.Add(Me.GBdatos)
         Me.Controls.Add(Me.BTNcancelar)
         Me.Controls.Add(Me.GbDetalles)
         Me.Controls.Add(Me.BTNguardar)
-        Me.Controls.Add(Me.Footer)
         Me.Controls.Add(Me.Header)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -695,14 +704,12 @@ Partial Class FrmVentas
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmVentas"
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Footer, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Footer.ResumeLayout(False)
-        Me.Footer.PerformLayout()
         CType(Me.PBimagenmodulo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Header.ResumeLayout(False)
         Me.Header.PerformLayout()
         Me.GbProducto.ResumeLayout(False)
         Me.GbProducto.PerformLayout()
+        CType(Me.PictureProducto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbCliente.ResumeLayout(False)
         Me.GbCliente.PerformLayout()
         Me.GbDetalles.ResumeLayout(False)
@@ -712,20 +719,11 @@ Partial Class FrmVentas
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents BindingSource1 As BindingSource
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents Footer As BindingNavigator
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents PBimagenmodulo As PictureBox
     Friend WithEvents Header As Panel
@@ -763,8 +761,18 @@ Partial Class FrmVentas
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents RBrestaurar As RadioButton
     Friend WithEvents RBnuevo As RadioButton
     Friend WithEvents RBeliminar As RadioButton
-    Friend WithEvents RBactualizar As RadioButton
+    Friend WithEvents TxtTotal As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PictureProducto As PictureBox
+    Friend WithEvents CodDetalle As DataGridViewTextBoxColumn
+    Friend WithEvents CodProducto As DataGridViewTextBoxColumn
+    Friend WithEvents nombreProducto As DataGridViewTextBoxColumn
+    Friend WithEvents precio As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents subtotal As DataGridViewTextBoxColumn
+    Friend WithEvents accion As DataGridViewTextBoxColumn
+    Friend WithEvents opcion As DataGridViewButtonColumn
+    Friend WithEvents LblInformador As Label
 End Class

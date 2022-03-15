@@ -76,8 +76,8 @@ Public Class Conexion
         Try
             ':::Creamos el objeto DataAdapter y le pasamos los dos parametros (Instruccion, conexión)
             'SELECT IF(ISNULL(Max(IDorden)), 0, Max(IDorden)) AS ULTIMO FROM tblordenes
-            StrSQL = Trim("SELECT IF(ISNULL(Max(" & Clave & ")), 0, Max(" & Clave & ")) AS ULTIMOID FROM " & Tabla & "")
-            Dim DA As New SQLiteDataAdapter(StrSQL, con)
+            StrSQL = Trim("SELECT MAX(" & Clave & ") AS ULTIMOID FROM " & Tabla & "")
+                Dim DA As New SQLiteDataAdapter(StrSQL, con)
             ':::Creamos el objeto DataTable que recibe la informacion del DataAdapter
             Dim DT As New DataTable 'Es como si fuera una tabla de esa base de datos, recomendao para uso de una solsa tbl
 
@@ -187,7 +187,6 @@ Public Class Conexion
         End Try
         con.Close()
     End Function
-
 
     Function CuentaRegistro(ByVal Campo As String, ByVal Tabla As String, ByVal Condicion As String) As Integer
         Dim StrSQL As String

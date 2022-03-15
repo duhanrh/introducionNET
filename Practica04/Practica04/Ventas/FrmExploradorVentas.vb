@@ -2,12 +2,13 @@
 Public Class FrmExploradorVentas
     Dim ObjConexion As New Conexion
     'Dim SqlString As String = "SELECT IdCliente, identificacion, (nombres || ' ' || apellidos) as CLIENTE, activo FROM clientes "
-    Dim SqlString As String = "SELECT ventas.IdVenta, ventas.fecha, clientes.identificacion as nit, (clientes.nombres || ' ' || clientes.apellidos) as Cliente, sum(detallesVentas.precio * detallesVentas.cantidad) as total FROM ventas LEFT JOIN clientes ON clientes.IdCliente=ventas.IdCliente LEFT JOIN detallesVentas ON detallesVentas.IdVenta=ventas.IdVenta"
+    Dim SqlString As String = "SELECT ventas.IdVenta, ventas.fecha, clientes.identificacion as nit, (clientes.nombres || ' ' || clientes.apellidos) as Cliente, sum(detallesVentas.precio * detallesVentas.cantidad) as total, ventas.anulada FROM ventas LEFT JOIN clientes ON clientes.IdCliente=ventas.IdCliente LEFT JOIN detallesVentas ON detallesVentas.IdVenta=ventas.IdVenta"
     Dim SqlGroup As String = " GROUP BY ventas.IdVenta"
     Dim tituloAPP As String = Application.ProductName
     Private Sub FrmExploradorVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.SetStyle(ControlStyles.DoubleBuffer Or ControlStyles.AllPaintingInWmPaint, True)
         Me.SetStyle(ControlStyles.UserPaint, True)
+        TXTfecha_corte.MaxDate = Date.Now
         If ObjConexion.Consulta(BindingSource1, Trim(SqlString & SqlGroup)) = "OK" Then
             Footer.BindingSource = BindingSource1
             DGdatos.DataSource = BindingSource1
@@ -24,17 +25,20 @@ Public Class FrmExploradorVentas
         DGdatos.Columns(2).Width = 140
         DGdatos.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DGdatos.Columns(4).Width = 140
+        DGdatos.Columns(5).Width = 80
         DGdatos.Columns(0).HeaderText = "VENTA"
         DGdatos.Columns(1).HeaderText = "FECHA"
         DGdatos.Columns(2).HeaderText = "IDENTIFICACION"
         DGdatos.Columns(3).HeaderText = "CLIENTE"
         DGdatos.Columns(4).HeaderText = "TOTAL"
+        DGdatos.Columns(5).HeaderText = "ANULADA"
         'DGdatos.Columns(2).Visible = False
         DGdatos.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DGdatos.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DGdatos.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         DGdatos.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         DGdatos.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        DGdatos.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DGdatos.Columns(0).DefaultCellStyle.Format = "00000"
         DGdatos.Columns(4).DefaultCellStyle.Format = "#,###.00"
     End Sub
@@ -46,33 +50,43 @@ Public Class FrmExploradorVentas
         FRM.RBnuevo.Enabled = True
         FRM.RBnuevo.Checked = True
         FRM.GBdatos.Enabled = True
-        FRM.RBactualizar.Enabled = False
-        FRM.RBrestaurar.Enabled = False
         FRM.RBeliminar.Enabled = False
         Dim fechaActual As Date = Date.Now
         FRM.DtpFecha.Value = fechaActual
         FRM.BTNguardar.Text = "Guardar"
         FRM.Text = "Nueva venta"
         FRM.Show()
-        'RBestados_activos.Checked = True
+        RBestados_activos.Checked = True
         BTNfiltro.PerformClick()
     End Sub
 
     Private Sub BTNfiltro_Click(sender As Object, e As EventArgs) Handles BTNfiltro.Click
         Dim condicion As String = ""
-        'If RBestados_activos.Checked = True Then
-        '    condicion = " WHERE activo='S'"
-        'ElseIf RBestados_inactivos.Checked = True Then
-        '    condicion = " WHERE activo='N'"
-        'ElseIf RBestados_todos.Checked = True Then
-        '    condicion = ""
-        'End If
+        Dim condicion2 As String = ""
+        If RBestados_activos.Checked = True Then
+            condicion = " WHERE ventas.anulada='N'"
+        ElseIf RBestados_inactivos.Checked = True Then
+            condicion = " WHERE ventas.anulada='S'"
+        ElseIf RBestados_todos.Checked = True Then
+            condicion = ""
+        End If
+
+        If RBconcorte.Checked = True Then
+            If Trim(condicion.Length) < 3 Then
+                condicion2 = " WHERE "
+            Else
+                condicion2 = " AND "
+            End If
+            condicion2 = condicion2 & " ventas.fecha >='" & Format(TXTfecha_inicio.Value, "dd/MM/yyyy") & "' AND ventas.fecha <='" & Format(TXTfecha_corte.Value, "dd/MM/yyyy") & "' "
+        Else
+            condicion2 = ""
+        End If
 
         DGdatos.DataSource = Nothing
         DGdatos.Refresh()
         BindingSource1.DataSource = Nothing
 
-        If ObjConexion.Consulta(BindingSource1, Trim(SqlString & condicion & SqlGroup)) = "OK" Then
+        If ObjConexion.Consulta(BindingSource1, Trim(SqlString & condicion & condicion2 & SqlGroup)) = "OK" Then
             Footer.BindingSource = BindingSource1
             DGdatos.DataSource = BindingSource1
             DGpropiedades()
@@ -83,30 +97,28 @@ Public Class FrmExploradorVentas
 
         Try
             Dim frm As New FrmVentas
-            frm.TxtIdVenta.Text = Format(DGdatos.CurrentRow.Cells(0).Value, "00000")
+            frm.TxtIdVenta.Text = DGdatos.CurrentRow.Cells(0).Value.ToString.PadLeft(5, "0")
             frm.DtpFecha.Value = DGdatos.CurrentRow.Cells(1).Value.ToString
             frm.TxtNit.Text = DGdatos.CurrentRow.Cells(2).Value
             frm.Text = "Venta # " & Format(DGdatos.CurrentRow.Cells(0).Value, "00000")
             frm.RBnuevo.Enabled = False
             frm.RBnuevo.Checked = False
-            frm.GBdatos.Enabled = False
-            If DGdatos.CurrentRow.Cells(4).Value.ToString = "N" Then
-                frm.RBactualizar.Enabled = False
-                frm.RBactualizar.Checked = False
-                frm.RBrestaurar.Enabled = True
-                frm.RBrestaurar.Checked = False
+            If DGdatos.CurrentRow.Cells(5).Value.ToString = "S" Then
+                frm.LblInformador.Text = "Venta anulada"
+                frm.LblInformador.Visible = True
                 frm.RBeliminar.Enabled = False
                 frm.RBeliminar.Checked = False
             Else
-                frm.RBactualizar.Enabled = True
-                frm.RBactualizar.Checked = False
-                frm.RBrestaurar.Enabled = False
-                frm.RBrestaurar.Checked = False
+                frm.LblInformador.Visible = False
+                frm.LblInformador.Text = ""
                 frm.RBeliminar.Enabled = True
                 frm.RBeliminar.Checked = False
             End If
             frm.StartPosition = FormStartPosition.CenterScreen
+            frm.BTNcancelar.Enabled = False
             frm.Show()
+            frm.BtnBuscarCliente.PerformClick()
+            frm.GBdatos.Enabled = False
             BTNfiltro.PerformClick()
         Catch ex As Exception
 
@@ -174,13 +186,13 @@ Public Class FrmExploradorVentas
             'DGdatos.RowCount > 0 Then
             Dim save As New SaveFileDialog
             save.Filter = "ARCHIVO XML (*.xml)|*.xml"
-            'If RBestados_activos.Checked = True Then
-            '    NombreArchivo = "(Activos)"
-            'ElseIf RBestados_inactivos.Checked = True Then
-            '    NombreArchivo = "(Inactivos)"
-            'Else
-            '    NombreArchivo = "(Todos)"
-            'End If
+            If RBestados_activos.Checked = True Then
+                NombreArchivo = "(Activas)"
+            ElseIf RBestados_inactivos.Checked = True Then
+                NombreArchivo = "(Anuladas)"
+            Else
+                NombreArchivo = "(Todos)"
+            End If
 
             save.FileName = Trim("REPORTE DE " & LBLmodulo.Text & " " & NombreArchivo & " GENERADO EL " & Format(Now.Day, "00") & "-" & Format(Now.Month, "00") & " - " & Now.Year & ".xls") 'xml
             If save.ShowDialog = Windows.Forms.DialogResult.OK Then
@@ -216,4 +228,11 @@ Public Class FrmExploradorVentas
         End Try
     End Sub
 
+    Private Sub RBconcorte_CheckedChanged(sender As Object, e As EventArgs) Handles RBconcorte.CheckedChanged
+        'If RBconcorte.Checked = True Then
+        '    Dim fechaActual As Date = Date.Now
+        '    TXTfecha_corte.Value = fechaActual
+        '    TXTfecha_inicio.Value = fechaActual.AddDays(-15)
+        'End If
+    End Sub
 End Class

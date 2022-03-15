@@ -104,7 +104,6 @@ D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.AboutBox1.resources
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.FrmCliente.resources
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.FrmExploradorClientes.resources
-D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.FrmExploradorCompras.resources
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.LoginForm1.resources
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.MDIParent1.resources
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.Resources.resources
@@ -121,7 +120,6 @@ D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\ShopNet.dll
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\ShopNet.pdb
 D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.genruntimeconfig.cache
-D:\censa\introducionNET\Practica04\Practica04\obj\Debug\netcoreapp3.1\Practica04.FrmVentas2.resources
 C:\Users\Sala403-3\source\repos\introducionNET\Practica04\Practica04\bin\Debug\netcoreapp3.1\ShopNet.exe
 C:\Users\Sala403-3\source\repos\introducionNET\Practica04\Practica04\bin\Debug\netcoreapp3.1\ShopNet.dll.config
 C:\Users\Sala403-3\source\repos\introducionNET\Practica04\Practica04\bin\Debug\netcoreapp3.1\ShopNet.deps.json

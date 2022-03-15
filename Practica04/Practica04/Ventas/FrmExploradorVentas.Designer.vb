@@ -45,6 +45,10 @@ Partial Class FrmExploradorVentas
         Me.DGdatos = New System.Windows.Forms.DataGridView()
         Me.BTNnuevo = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GBestados = New System.Windows.Forms.GroupBox()
+        Me.RBestados_activos = New System.Windows.Forms.RadioButton()
+        Me.RBestados_todos = New System.Windows.Forms.RadioButton()
+        Me.RBestados_inactivos = New System.Windows.Forms.RadioButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.RBsincorte = New System.Windows.Forms.RadioButton()
         Me.RBconcorte = New System.Windows.Forms.RadioButton()
@@ -61,6 +65,7 @@ Partial Class FrmExploradorVentas
         Me.Footer.SuspendLayout()
         CType(Me.DGdatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.GBestados.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PBimagenmodulo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Header.SuspendLayout()
@@ -99,12 +104,12 @@ Partial Class FrmExploradorVentas
         Me.GroupBox1.Controls.Add(Me.TXTconsulta)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(601, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(435, 4)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.GroupBox1.Size = New System.Drawing.Size(302, 99)
-        Me.GroupBox1.TabIndex = 26
+        Me.GroupBox1.Size = New System.Drawing.Size(468, 99)
+        Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscar"
         '
@@ -116,11 +121,11 @@ Partial Class FrmExploradorVentas
         Me.BTNbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BTNbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNbuscar.ForeColor = System.Drawing.SystemColors.Control
-        Me.BTNbuscar.Location = New System.Drawing.Point(249, 42)
+        Me.BTNbuscar.Location = New System.Drawing.Point(415, 42)
         Me.BTNbuscar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.BTNbuscar.Name = "BTNbuscar"
         Me.BTNbuscar.Size = New System.Drawing.Size(43, 29)
-        Me.BTNbuscar.TabIndex = 16
+        Me.BTNbuscar.TabIndex = 1
         Me.BTNbuscar.UseVisualStyleBackColor = False
         '
         'TXTconsulta
@@ -131,8 +136,8 @@ Partial Class FrmExploradorVentas
         Me.TXTconsulta.Location = New System.Drawing.Point(13, 43)
         Me.TXTconsulta.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TXTconsulta.Name = "TXTconsulta"
-        Me.TXTconsulta.Size = New System.Drawing.Size(232, 29)
-        Me.TXTconsulta.TabIndex = 15
+        Me.TXTconsulta.Size = New System.Drawing.Size(398, 29)
+        Me.TXTconsulta.TabIndex = 0
         '
         'BindingNavigatorPositionItem
         '
@@ -190,7 +195,7 @@ Partial Class FrmExploradorVentas
         Me.Footer.Name = "Footer"
         Me.Footer.PositionItem = Me.BindingNavigatorPositionItem
         Me.Footer.Size = New System.Drawing.Size(1134, 25)
-        Me.Footer.TabIndex = 33
+        Me.Footer.TabIndex = 3
         Me.Footer.Text = "BindingNavigator1"
         '
         'BindingNavigatorSeparator2
@@ -210,7 +215,7 @@ Partial Class FrmExploradorVentas
         Me.BTNexportar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.BTNexportar.Name = "BTNexportar"
         Me.BTNexportar.Size = New System.Drawing.Size(103, 93)
-        Me.BTNexportar.TabIndex = 28
+        Me.BTNexportar.TabIndex = 3
         Me.BTNexportar.UseVisualStyleBackColor = False
         '
         'BTNfiltro
@@ -220,11 +225,11 @@ Partial Class FrmExploradorVentas
         Me.BTNfiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BTNfiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNfiltro.ForeColor = System.Drawing.SystemColors.Control
-        Me.BTNfiltro.Location = New System.Drawing.Point(483, 8)
+        Me.BTNfiltro.Location = New System.Drawing.Point(313, 8)
         Me.BTNfiltro.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.BTNfiltro.Name = "BTNfiltro"
         Me.BTNfiltro.Size = New System.Drawing.Size(114, 93)
-        Me.BTNfiltro.TabIndex = 7
+        Me.BTNfiltro.TabIndex = 1
         Me.BTNfiltro.UseVisualStyleBackColor = False
         '
         'DGdatos
@@ -251,7 +256,7 @@ Partial Class FrmExploradorVentas
         Me.DGdatos.Name = "DGdatos"
         Me.DGdatos.ReadOnly = True
         Me.DGdatos.Size = New System.Drawing.Size(1087, 229)
-        Me.DGdatos.TabIndex = 9
+        Me.DGdatos.TabIndex = 0
         '
         'BTNnuevo
         '
@@ -265,7 +270,7 @@ Partial Class FrmExploradorVentas
         Me.BTNnuevo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.BTNnuevo.Name = "BTNnuevo"
         Me.BTNnuevo.Size = New System.Drawing.Size(114, 93)
-        Me.BTNnuevo.TabIndex = 6
+        Me.BTNnuevo.TabIndex = 4
         Me.BTNnuevo.UseVisualStyleBackColor = False
         '
         'Panel2
@@ -273,7 +278,7 @@ Partial Class FrmExploradorVentas
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel2.Controls.Add(Me.GroupBox3)
+        Me.Panel2.Controls.Add(Me.GBestados)
         Me.Panel2.Controls.Add(Me.BTNexportar)
         Me.Panel2.Controls.Add(Me.BTNfiltro)
         Me.Panel2.Controls.Add(Me.GroupBox1)
@@ -282,10 +287,64 @@ Partial Class FrmExploradorVentas
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1134, 106)
-        Me.Panel2.TabIndex = 32
+        Me.Panel2.TabIndex = 1
+        '
+        'GBestados
+        '
+        Me.GBestados.BackColor = System.Drawing.Color.Transparent
+        Me.GBestados.Controls.Add(Me.RBestados_activos)
+        Me.GBestados.Controls.Add(Me.RBestados_todos)
+        Me.GBestados.Controls.Add(Me.RBestados_inactivos)
+        Me.GBestados.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.GBestados.ForeColor = System.Drawing.Color.Black
+        Me.GBestados.Location = New System.Drawing.Point(20, 4)
+        Me.GBestados.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GBestados.Name = "GBestados"
+        Me.GBestados.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.GBestados.Size = New System.Drawing.Size(285, 99)
+        Me.GBestados.TabIndex = 0
+        Me.GBestados.TabStop = False
+        Me.GBestados.Text = "Filtrar por estados"
+        '
+        'RBestados_activos
+        '
+        Me.RBestados_activos.AutoSize = True
+        Me.RBestados_activos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.RBestados_activos.Location = New System.Drawing.Point(192, 40)
+        Me.RBestados_activos.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.RBestados_activos.Name = "RBestados_activos"
+        Me.RBestados_activos.Size = New System.Drawing.Size(78, 24)
+        Me.RBestados_activos.TabIndex = 2
+        Me.RBestados_activos.Text = "Activas"
+        Me.RBestados_activos.UseVisualStyleBackColor = True
+        '
+        'RBestados_todos
+        '
+        Me.RBestados_todos.AutoSize = True
+        Me.RBestados_todos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.RBestados_todos.Location = New System.Drawing.Point(15, 40)
+        Me.RBestados_todos.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.RBestados_todos.Name = "RBestados_todos"
+        Me.RBestados_todos.Size = New System.Drawing.Size(71, 24)
+        Me.RBestados_todos.TabIndex = 0
+        Me.RBestados_todos.Text = "Todas"
+        Me.RBestados_todos.UseVisualStyleBackColor = True
+        '
+        'RBestados_inactivos
+        '
+        Me.RBestados_inactivos.AutoSize = True
+        Me.RBestados_inactivos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.RBestados_inactivos.Location = New System.Drawing.Point(94, 40)
+        Me.RBestados_inactivos.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.RBestados_inactivos.Name = "RBestados_inactivos"
+        Me.RBestados_inactivos.Size = New System.Drawing.Size(94, 24)
+        Me.RBestados_inactivos.TabIndex = 1
+        Me.RBestados_inactivos.Text = "Anuladas"
+        Me.RBestados_inactivos.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
+        Me.GroupBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.Controls.Add(Me.RBsincorte)
         Me.GroupBox3.Controls.Add(Me.RBconcorte)
@@ -294,12 +353,12 @@ Partial Class FrmExploradorVentas
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox3.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox3.Location = New System.Drawing.Point(20, 8)
+        Me.GroupBox3.Location = New System.Drawing.Point(651, 3)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox3.Size = New System.Drawing.Size(463, 93)
-        Me.GroupBox3.TabIndex = 29
+        Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Filtrado por fecha"
         '
@@ -310,7 +369,7 @@ Partial Class FrmExploradorVentas
         Me.RBsincorte.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RBsincorte.Name = "RBsincorte"
         Me.RBsincorte.Size = New System.Drawing.Size(93, 24)
-        Me.RBsincorte.TabIndex = 47
+        Me.RBsincorte.TabIndex = 0
         Me.RBsincorte.Text = "Sin Corte"
         Me.RBsincorte.UseVisualStyleBackColor = True
         '
@@ -322,7 +381,7 @@ Partial Class FrmExploradorVentas
         Me.RBconcorte.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.RBconcorte.Name = "RBconcorte"
         Me.RBconcorte.Size = New System.Drawing.Size(124, 24)
-        Me.RBconcorte.TabIndex = 15
+        Me.RBconcorte.TabIndex = 1
         Me.RBconcorte.TabStop = True
         Me.RBconcorte.Text = "Con Corte del"
         Me.RBconcorte.UseVisualStyleBackColor = True
@@ -335,8 +394,8 @@ Partial Class FrmExploradorVentas
         Me.TXTfecha_corte.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TXTfecha_corte.Name = "TXTfecha_corte"
         Me.TXTfecha_corte.Size = New System.Drawing.Size(137, 26)
-        Me.TXTfecha_corte.TabIndex = 46
-        Me.TXTfecha_corte.Value = New Date(2019, 4, 4, 0, 0, 0, 0)
+        Me.TXTfecha_corte.TabIndex = 4
+        Me.TXTfecha_corte.Value = New Date(2022, 1, 1, 0, 0, 0, 0)
         '
         'TXTfecha_inicio
         '
@@ -346,8 +405,8 @@ Partial Class FrmExploradorVentas
         Me.TXTfecha_inicio.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TXTfecha_inicio.Name = "TXTfecha_inicio"
         Me.TXTfecha_inicio.Size = New System.Drawing.Size(137, 26)
-        Me.TXTfecha_inicio.TabIndex = 44
-        Me.TXTfecha_inicio.Value = New Date(2019, 4, 4, 0, 0, 0, 0)
+        Me.TXTfecha_inicio.TabIndex = 2
+        Me.TXTfecha_inicio.Value = New Date(2022, 1, 1, 0, 0, 0, 0)
         '
         'Label15
         '
@@ -358,7 +417,7 @@ Partial Class FrmExploradorVentas
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(15, 20)
-        Me.Label15.TabIndex = 43
+        Me.Label15.TabIndex = 3
         Me.Label15.Text = "-"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -377,6 +436,7 @@ Partial Class FrmExploradorVentas
         'Header
         '
         Me.Header.BackColor = System.Drawing.Color.FromArgb(CType(CType(92, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Header.Controls.Add(Me.GroupBox3)
         Me.Header.Controls.Add(Me.PBimagenmodulo)
         Me.Header.Controls.Add(Me.LBLmodulo)
         Me.Header.Dock = System.Windows.Forms.DockStyle.Top
@@ -384,7 +444,7 @@ Partial Class FrmExploradorVentas
         Me.Header.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Header.Name = "Header"
         Me.Header.Size = New System.Drawing.Size(1134, 100)
-        Me.Header.TabIndex = 30
+        Me.Header.TabIndex = 0
         '
         'LBLmodulo
         '
@@ -396,7 +456,7 @@ Partial Class FrmExploradorVentas
         Me.LBLmodulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLmodulo.Name = "LBLmodulo"
         Me.LBLmodulo.Size = New System.Drawing.Size(174, 42)
-        Me.LBLmodulo.TabIndex = 19
+        Me.LBLmodulo.TabIndex = 0
         Me.LBLmodulo.Text = "VENTAS"
         Me.LBLmodulo.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -411,7 +471,7 @@ Partial Class FrmExploradorVentas
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.GroupBox6.Size = New System.Drawing.Size(1095, 251)
-        Me.GroupBox6.TabIndex = 31
+        Me.GroupBox6.TabIndex = 2
         Me.GroupBox6.TabStop = False
         '
         'FrmExploradorVentas
@@ -437,6 +497,8 @@ Partial Class FrmExploradorVentas
         Me.Footer.PerformLayout()
         CType(Me.DGdatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        Me.GBestados.ResumeLayout(False)
+        Me.GBestados.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.PBimagenmodulo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -478,4 +540,8 @@ Partial Class FrmExploradorVentas
     Friend WithEvents TXTfecha_corte As DateTimePicker
     Friend WithEvents TXTfecha_inicio As DateTimePicker
     Friend WithEvents Label15 As Label
+    Friend WithEvents GBestados As GroupBox
+    Friend WithEvents RBestados_activos As RadioButton
+    Friend WithEvents RBestados_todos As RadioButton
+    Friend WithEvents RBestados_inactivos As RadioButton
 End Class

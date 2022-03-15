@@ -11,8 +11,6 @@ Public Class MDIParent1
         FRM.RBnuevo.Enabled = True
         FRM.RBnuevo.Checked = True
         FRM.GBdatos.Enabled = True
-        FRM.RBactualizar.Enabled = False
-        FRM.RBrestaurar.Enabled = False
         FRM.RBeliminar.Enabled = False
         Dim fechaActual As Date = Date.Now
         FRM.DtpFecha.Value = fechaActual
@@ -157,8 +155,13 @@ Public Class MDIParent1
                 End If
             Next
         Else
-            'frm.RBestados_activos.Checked = True
+            frm.RBestados_activos.Checked = True
+            frm.RBconcorte.Checked = True
+            Dim fechaActual As Date = Date.Now
+            frm.TXTfecha_corte.Value = fechaActual
+            frm.TXTfecha_inicio.Value = fechaActual.AddDays(-8)
             frm.Show()
+            frm.BTNfiltro.PerformClick()
         End If
     End Sub
 End Class
