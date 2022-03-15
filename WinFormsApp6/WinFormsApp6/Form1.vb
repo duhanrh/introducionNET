@@ -20,43 +20,47 @@
         CbPeliculas.Items.Clear()
         CbHorarios.Items.Clear()
 
-        If TxtEdad.Text = "" Then
-            MessageBox.Show("El campo edad es requerido",
-           "CINEMAR",
-           MessageBoxButtons.OK,
-           MessageBoxIcon.Error,
-           MessageBoxDefaultButton.Button2)
-            Return
-        End If
+        If (BtnPlanes.Text = "Mostrar plan") Then
 
-        TxtEdad.Enabled = False
+            If TxtEdad.Text = "" Then
+                MessageBox.Show("El campo edad es requerido",
+                "CINEMAR",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button2)
+                Return
+            End If
 
-        If Val(TxtEdad.Text) < 18 Then
-            LblPlan.Text = "PLAN INFANTIL"
-            'tipo peliculas
-            CbTipo.Items.Clear()
-            CbTipo.Items.Add("Infantil")
-            CbTipo.Text = "Infantil"
-            'Peliculas
-            CbPeliculas.Items.Clear()
-            CbPeliculas.Items.Add("Encanto")
-            CbPeliculas.Items.Add("Hotel transylvania")
-            CbPeliculas.Items.Add("Lucas")
-            CbPeliculas.Items.Add("Tom y Jerry")
-            CbPeliculas.Items.Add("Coco")
-            'Horarios
-            CbHorarios.Items.Clear()
-            CbHorarios.Items.Add("10:00")
-            CbHorarios.Items.Add("12:00")
-            CbHorarios.Items.Add("14:00")
-            CbHorarios.Items.Add("16:00")
-        Else
-            LblPlan.Text = "PLAN ADULTO"
+            TxtEdad.Enabled = False
+            BtnPlanes.Text = "Nuevo plan"
+
+            If Val(TxtEdad.Text) < 18 Then
+                LblPlan.Text = "PLAN INFANTIL"
+                'tipo peliculas
+                CbTipo.Items.Clear()
+                CbTipo.Items.Add("Infantil")
+                CbTipo.Text = "Infantil"
+                'Peliculas
+                CbPeliculas.Items.Clear()
+                CbPeliculas.Items.Add("Encanto")
+                CbPeliculas.Items.Add("Hotel transylvania")
+                CbPeliculas.Items.Add("Lucas")
+                CbPeliculas.Items.Add("Tom y Jerry")
+                CbPeliculas.Items.Add("Coco")
+                'Horarios
+                CbHorarios.Items.Clear()
+                CbHorarios.Items.Add("10:00")
+                CbHorarios.Items.Add("12:00")
+                CbHorarios.Items.Add("14:00")
+                CbHorarios.Items.Add("16:00")
+            Else
+                LblPlan.Text = "PLAN ADULTO"
             'tipo peliculas
             CbTipo.Items.Clear()
             CbTipo.Items.Add("Acción")
             CbTipo.Items.Add("Drama")
             CbTipo.Items.Add("Terror")
+            CbTipo.Text = "Acción"
             'Peliculas, ESTO ESTA EN EL CHANGE
             'Horarios
             CbHorarios.Items.Clear()
@@ -69,7 +73,14 @@
             CbHorarios.Items.Add("22:00")
             CbHorarios.Items.Add("00:00")
         End If
-        GbDatos.Enabled = True
+            GbDatos.Enabled = True
+
+        Else
+            BtnPlanes.Text = "Mostrar plan"
+            TxtEdad.Clear()
+            TxtEdad.Enabled = True
+            GbDatos.Enabled = False
+        End If
     End Sub
 
     Private Sub TxtEdad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtEdad.KeyPress
@@ -77,7 +88,15 @@
     End Sub
 
     Private Sub CbTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbTipo.SelectedIndexChanged
-        If Val(TxtEdad.Text) > 18 And CbTipo.Text.ToUpper <> "INFANTIL" And CbTipo.Text <> "" Then
+        'If CbTipo.Text.ToUpper <> "INFANTIL" Then
+        '    CbPeliculas.Items.Clear()
+        '    CbPeliculas.Items.Add("Peli " & CbTipo.Text.ToLower & " 1")
+        '    CbPeliculas.Items.Add("Peli " & CbTipo.Text.ToLower & " 2")
+        '    CbPeliculas.Items.Add("Peli " & CbTipo.Text.ToLower & " 3")
+        'End If
+    End Sub
+    Private Sub CbTipo_TextChanged(sender As Object, e As EventArgs) Handles CbTipo.TextChanged
+        If CbTipo.Text.ToUpper <> "INFANTIL" Then
             CbPeliculas.Items.Clear()
             CbPeliculas.Items.Add("Peli " & CbTipo.Text.ToLower & " 1")
             CbPeliculas.Items.Add("Peli " & CbTipo.Text.ToLower & " 2")
@@ -131,5 +150,6 @@
            MessageBoxDefaultButton.Button2)
         Limpiar()
     End Sub
+
 
 End Class

@@ -114,7 +114,7 @@ Partial Class Form1
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(339, 210)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 15)
+        Me.Label5.Size = New System.Drawing.Size(89, 15)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Valor a cancelar"
         '
@@ -136,7 +136,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(28, 132)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 15)
+        Me.Label4.Size = New System.Drawing.Size(90, 15)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Tipo de película"
         '
